@@ -1,0 +1,16 @@
+{
+  "Name": "Stone",
+  "BaseHealth": 100,
+  "PlaceSound": "sounds/impacts/melee/impact-melee-concrete.sound",
+  "HurtSound": "sounds/impacts/melee/impact-melee-concrete.sound",
+  "Description": "A stone node.",
+  "InteractText": null,
+  "CanPickup": false,
+  "CanHurt": true,
+  "CanDie": true,
+  "DroppableCollectable": [
+    "prefabs/collectable_rock.prefab"
+  ],
+  "__references": [],
+  "__version": 0
+}

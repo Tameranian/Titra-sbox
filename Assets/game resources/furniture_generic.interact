@@ -1,0 +1,13 @@
+{
+  "Name": "Furniture",
+  "BaseHealth": 100,
+  "PlaceSound": "sounds/impacts/melee/impact-melee-wood.sound",
+  "HurtSound": "sounds/impacts/bullets/impact-bullet-wood.sound",
+  "Description": null,
+  "InteractText": null,
+  "CanPickup": true,
+  "CanHurt": true,
+  "CanDie": true,
+  "__references": [],
+  "__version": 0
+}

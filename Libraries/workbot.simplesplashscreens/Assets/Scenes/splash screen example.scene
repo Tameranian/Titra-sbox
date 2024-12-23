@@ -1,0 +1,181 @@
+{
+  "__guid": "dc8f6b4d-db68-45e1-8372-b39856d06f5d",
+  "GameObjects": [
+    {
+      "__guid": "749087db-4792-479a-bbd9-7ea09947c79b",
+      "Flags": 0,
+      "Name": "Camera",
+      "Tags": "maincamera",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.CameraComponent",
+          "__guid": "6263747a-07ec-441d-9046-f5c912da2475",
+          "BackgroundColor": "0.33333,0.46275,0.52157,1",
+          "ClearFlags": "All",
+          "FieldOfView": 60,
+          "IsMainCamera": true,
+          "Orthographic": false,
+          "OrthographicHeight": 1204,
+          "Priority": 1,
+          "RenderExcludeTags": "",
+          "RenderTags": "",
+          "TargetEye": "None",
+          "Viewport": "0,0,1,1",
+          "ZFar": 10000,
+          "ZNear": 10
+        }
+      ]
+    },
+    {
+      "__guid": "f2291d42-b57c-4e0a-bc40-44b8fac0f9e0",
+      "Flags": 0,
+      "Name": "Screen",
+      "Position": "185.2211,60.45948,-48.26221",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ScreenPanel",
+          "__guid": "72bf862e-56c2-455e-814a-e9314e842341",
+          "AutoScreenScale": true,
+          "Opacity": 1,
+          "Scale": 1,
+          "ScaleStrategy": "ConsistentHeight",
+          "ZIndex": 100
+        },
+        {
+          "__type": "SimpleSplashScreen",
+          "__guid": "a1325710-4fff-4143-8750-f0ec9dfb6a8d",
+          "SplashEntries": [
+            {
+              "TexturePath": "textures/splash_example.png",
+              "duration": 3,
+              "scaleDuration": 8,
+              "opacityDuration": 3,
+              "ScaleCurve": {
+                "rangey": "1,1.5",
+                "frames": [
+                  {
+                    "in": -1.8803414,
+                    "out": 1.8803414
+                  },
+                  {
+                    "x": 1,
+                    "y": 1
+                  }
+                ]
+              },
+              "OpacityCurve": [
+                {},
+                {
+                  "x": 0.5,
+                  "y": 1
+                },
+                {
+                  "x": 1
+                }
+              ],
+              "WaitTimeStart": 0.2,
+              "WaitTimeEnd": 0.2
+            }
+          ],
+          "StartAutomatically": true
+        }
+      ]
+    },
+    {
+      "__guid": "7880ae6f-201b-4b07-a7b7-84472618daf3",
+      "Flags": 0,
+      "Name": "2D Skybox",
+      "Position": "199.0843,44.00496,-27.72262",
+      "Tags": "skybox",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.SkyBox2D",
+          "__guid": "5e5149fc-e49d-41af-afdf-7574c6cd10dd",
+          "SkyIndirectLighting": true,
+          "SkyMaterial": "materials/skybox/skybox_day_01.vmat",
+          "Tint": "1,1,1,1"
+        }
+      ]
+    },
+    {
+      "__guid": "60e8ca2f-e290-4971-b080-80a773cd2d73",
+      "Flags": 0,
+      "Name": "Text",
+      "Position": "250,0,0",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.TextRenderer",
+          "__guid": "1a595cd9-64d0-46e7-9e99-6af97b068059",
+          "__version": 1,
+          "BlendMode": "Normal",
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "Scale": 0.22,
+          "TextAlignment": "Center",
+          "TextScope": {
+            "Text": "Just pretend this is a main menu",
+            "TextColor": "0.45103,0.47149,0.5297,1",
+            "FontName": "Poppins",
+            "FontSize": 64,
+            "FontWeight": 800,
+            "LineHeight": 1,
+            "Outline": {
+              "Size": 4,
+              "Color": "0,0,1,1"
+            },
+            "Shadow": {
+              "Size": 4,
+              "Color": "0,0,0,1",
+              "Offset": "4,4"
+            },
+            "OutlineUnder": {
+              "Size": 4,
+              "Color": "0,1,0,1"
+            },
+            "ShadowUnder": {
+              "Size": 4,
+              "Color": "0,0,0,1",
+              "Offset": "4,4"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "SceneProperties": {
+    "FixedUpdateFrequency": 50,
+    "MaxFixedUpdates": 5,
+    "NetworkFrequency": 30,
+    "NetworkInterpolation": true,
+    "PhysicsSubSteps": 1,
+    "ThreadedAnimation": true,
+    "TimeScale": 1,
+    "UseFixedUpdate": true,
+    "Metadata": {},
+    "NavMesh": {
+      "Enabled": false,
+      "IncludeStaticBodies": true,
+      "IncludeKeyframedBodies": true,
+      "EditorAutoUpdate": true,
+      "AgentHeight": 64,
+      "AgentRadius": 16,
+      "AgentStepSize": 18,
+      "AgentMaxSlope": 40,
+      "ExcludedBodies": "",
+      "IncludedBodies": ""
+    }
+  },
+  "ResourceVersion": 2,
+  "Title": null,
+  "Description": null,
+  "__references": [],
+  "__version": 2
+}

@@ -1,0 +1,15 @@
+{
+  "Title": "Simple splash screens",
+  "Type": "library",
+  "Org": "workbot",
+  "Ident": "simplesplashscreens",
+  "Schema": 1,
+  "IncludeSourceFiles": true,
+  "Resources": null,
+  "PackageReferences": [],
+  "EditorReferences": null,
+  "IsWhitelistDisabled": false,
+  "Metadata": {
+    "CsProjName": ""
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "Name": "Tree",
+  "BaseHealth": 100,
+  "PlaceSound": "sounds/impacts/melee/impact-melee-wood.sound",
+  "HurtSound": "sounds/impacts/bullets/impact-bullet-wood.sound",
+  "Description": "An oak tree.",
+  "InteractText": null,
+  "CanPickup": false,
+  "CanHurt": true,
+  "CanDie": true,
+  "__references": [],
+  "__version": 0
+}

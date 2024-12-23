@@ -1,0 +1,262 @@
+
+TitraHud
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+
+
+
+    .overlay
+    {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: 0;
+        font-family: Oxanium 3;
+        opacity: 0;
+
+        // this is showing how to position things around things in the scene
+        // but in screen space instead of using a world panel
+        .model-overlay
+        {
+            top: 50%; /* Place the top of the overlay at 50% of the parent's height */
+            left: 50%; /* Place the left side of the overlay at 50% of the parent's width */
+            transform: translate(50%, -50%); /* Move the overlay back by half of its own width and height */
+            text-align: center;
+            position: absolute;
+            background-color: #fff;
+            cursor: pointer;
+            flex-direction: column;
+            background-image: url("ui/TooltipBackground.png");
+            background-size:100% 100%;
+            
+            .model-name {
+
+                font-family:  Oxanium;
+                text-stroke: 8px rgba(0, 0, 0, 0.75f);
+                letter-spacing: 3px;
+                color: white;
+                font-size: 30px;
+                text-align: center;
+                flex-direction: column;
+                padding: 10px;
+                background-image: url("ui/NamePanel.png");
+                background-size: 100% 100%;
+                position: relative; /* Use relative positioning */
+                width: 100%; /* Set width to 100% */
+
+            }
+            .model-data {
+
+                font-family:  Oxanium;
+                text-stroke: 8px rgba(0, 0, 0, 0.75f);
+                letter-spacing: 3px;;
+                color: white;
+                font-size: 30px;
+                text-align: center;
+                flex-direction: column;
+                padding-left: 10px;
+                padding-right: 10px;
+                padding-top: 2px;
+                padding-bottom: 2px;
+                position: relative; /* Use relative positioning */
+                width: 100%; /* Set width to 100% */
+            }
+        }
+        
+        .interact-overlay
+        {
+            top: 90%; /* Place the top of the overlay at 50% of the parent's height */
+            left: 50%; /* Place the left side of the overlay at 50% of the parent's width */
+            transform: translate(-50%, -50%); /* Move the overlay back by half of its own width and height */
+            position: absolute;
+            cursor: pointer;
+            width: 30%;
+            padding: 1%;
+            background-image: url("ui/NamePanel.png");
+            background-color: rgba(255,255,255,0.1);
+            
+            background-size: 100% 100%;
+            font-family:  Oxanium;
+            text-stroke: 12px rgba(0, 0, 0, 0.75f);
+            letter-spacing: 3px;
+            .interact-content
+            {
+                margin: auto;
+                
+                .interact-icon
+                {
+                    background-image: url("ui/E_Key_Dark.png");
+                    background-size: 100%;
+                    width: 25px;
+                }
+                .interact-text
+                {
+                    color: white;
+                    font-size: 30px;
+                }
+
+            }
+            
+            //.overlay-background
+            //{
+            //    position: absolute;
+            //    background-image: url("ui/NamePanel.png");
+            //    background-size: 100% 100%;
+            //    width: 100%;
+            //    height: 6vh;
+            //    opacity: 1;
+            //}
+        }  
+    }
+    .overlay.fade-in {
+        opacity: 1;
+    }
+    .overlay.fade-out {
+        opacity: 0;
+    }
+
+
+    .crosshair
+    {
+        position: absolute;
+        height: 8px;
+        width: 8px;
+        background-color: rgba(255, 255, 255, 0.834);
+        opacity: .2;
+        top: 50%;
+        left: 50%; 
+        
+        transform: translate(-50%, -50%);
+    } 
+
+    // .health-background {
+    //     position: absolute;
+    //     bottom: 0%;
+    //     left: 0%;
+    //     width: 400px;
+    //     height: 140px;
+    //     background-image: url("ui/HealthBackground2.png");
+    //     background-size: contain; /* Prevent stretching */
+    //     background-repeat: no-repeat; /* Prevent repeating */
+    // }
+    // .health-color {
+    //     position: absolute;
+    //     bottom: 0%;
+    //     left: 0%;
+    //     width: 400px;
+    //     height: 140px;
+    //     z-index: 2;
+    //     background-image: url("ui/HealthColor.png");
+    //     filter: sepia(160%) saturate(250%) brightness(100%) hue-rotate(330deg);
+    //     background-size: contain; /* Prevent stretching */
+    //     background-repeat: no-repeat; /* Prevent repeating */
+        
+    // }
+    // .health-foreground {
+    //     position: absolute;
+    //     bottom: 0%;
+    //     left: 0%;
+    //     width: 400px;
+    //     height: 140px;
+    //     z-index: 3;
+    //     background-image: url("ui/HealthForeground.png");
+    //     background-size: contain; /* Prevent stretching */
+    //     background-repeat: no-repeat; /* Prevent repeating */
+    // }
+
+    .inventory
+    {
+        position: absolute;
+        top: 100px;
+        right: 100px;
+        display: flex;
+        width: 500px;
+        height: 1500px;
+        margin-right: 10px;
+        background-image: url("ui/_Inventory.png");
+        background-size: contain; /* Prevent stretching */
+        background-repeat: no-repeat; /* Prevent repeating */
+        transition: right 0.15s ease-in-out;
+        
+    }
+
+    .inventory-slide-in {
+        right: 100px; /* Slide in from the top of the screen */
+    }
+
+    .inventory-slide-out {
+        right: -550px; /* Slide out above the viewport */
+    }
+    
+    .hotbar {
+        position: absolute;
+        top: -100px;
+        left: 20px; 
+        display: flex;
+        transition: top 0.5s ease-in-out; 
+    }
+
+    .hotbar .slot {
+       
+        width: 50px; 
+        height: 50px;
+        margin-right: 10px; 
+        background-image: url("ui/BlankSlot.png");
+    }
+    .hotbar.visible {
+        top: 20px; /* Adjust the top position as needed for the visible state */
+    }
+
+    .hotbar-slide-in {
+        top: 20px; /* Slide in from the top of the screen */
+    }
+
+    .hotbar-slide-out {
+        top: -100px; /* Slide out above the viewport */
+    }
+    
+    .stats {
+        position: absolute;
+        bottom: 15px;
+        left: 15px;
+        display: flex; /* Use flexbox */
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+        width: 150px; /* Adjust width as needed */
+        height: auto; /* Adjust height as needed */
+        gap: 1px; /* Space between elements */
+
+        .hunger, .energy, .health {                
+            font-family:  Oxanium;
+            // background-color: rgba(0, 0, 0, 0.5); /* Optional: Add some background color */
+            text-stroke: 8px rgba(0, 0, 0, 1);
+            letter-spacing: 3px;
+            padding: 1px; /* Padding inside each stat */
+            // border-radius: 5px; /* Optional: Rounded corners */
+            width: 100%; /* Full width of parent */
+            text-align: center; /* Center text */
+            font-size: 30px;
+        }
+
+        .hunger {
+            color: orange;
+
+        }
+
+        .energy {
+            color: rgb(93, 185, 215);
+
+        }
+
+        .health {
+            color: rgb(216, 52, 52);
+
+        }
+                
+    }
+}

@@ -1,0 +1,13 @@
+{
+  "Name": "Cog Fixture",
+  "BaseHealth": 25,
+  "PlaceSound": "sounds/impacts/melee/impact-melee-metal.sound",
+  "HurtSound": "sounds/impacts/bullets/impact-bullet-metal.sound",
+  "Description": "Can keep a cog in place.",
+  "InteractText": null,
+  "CanPickup": true,
+  "CanHurt": true,
+  "CanDie": true,
+  "__references": [],
+  "__version": 0
+}

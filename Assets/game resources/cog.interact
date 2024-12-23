@@ -1,0 +1,13 @@
+{
+  "Name": "Cog",
+  "BaseHealth": 50,
+  "PlaceSound": "sounds/impacts/melee/impact-melee-metal.sound",
+  "HurtSound": "sounds/impacts/bullets/impact-bullet-metal.sound",
+  "Description": "It spins!",
+  "InteractText": null,
+  "CanPickup": true,
+  "CanHurt": true,
+  "CanDie": true,
+  "__references": [],
+  "__version": 0
+}

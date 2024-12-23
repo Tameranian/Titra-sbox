@@ -1,0 +1,71 @@
+@using Sandbox;
+@using Sandbox.UI;
+@inherits PanelComponent
+
+<root>
+	<div class="hud">
+		<div class="crosshair"> </div>
+		<div class="stats">
+			<div class="hunger">@Player.hungerText</div>
+			<div class="energy">@Player.energyText</div>
+			<div class="health">@Player.healthText</div>
+		</div>
+		<div class="overlay @(PlayerController.Hovered != null && PlayerController.Hovered.Components.Get<Interactable>() != null ? "fade-in" : "fade-out")">
+			@if (PlayerController.Hovered != null && PlayerController.Hovered.Components.Get<Interactable>() != null)
+			{
+				var interactableComponent = PlayerController.Hovered.GameObject.Components.Get<Interactable>();
+				var model = PlayerController.Hovered.GameObject;
+				var modelName = !Player.isSleeping ? interactableComponent.interactableResource.Name : null;
+				var modelDescription = interactableComponent.interactableResource.Description;
+				@* var modelWeight = player.hoveredObjectItemComponent.WeightInGrams; *@
+				var bounds = model.GetBounds();
+				var pos = Scene.Camera.PointToScreenNormal(bounds.Center, out var behind );
+				if (!behind)
+				{
+					pos *= 100.0f;
+					<div class="model-overlay" style="left: @(pos.x)%; top: @(pos.y)%;" >
+						<div class="model-name">@modelName</div>
+						<div class="model-data">@modelDescription</div>		
+						@* <div class="model-data">@modelWeight lbs</div> *@
+					</div>
+				
+				}
+				@* if (interactableComponent.interactableResource.InteractText != null)
+				{
+					<div class="interact-overlay">
+						<div class="overlay-background"></div>
+						<div class="interact-content">
+							<div class="interact-icon"></div>
+							<div class="interact-text">@interactableComponent.interactableResource.InteractText</div>
+						</div>
+						@* <div class="model-data">@modelDescription</div> 
+					</div>
+				} *@
+			}
+		</div>	
+    </div>
+</root>
+
+@code
+{
+
+	[Property, TextArea] public string MyStringValue { get; set; } = "Hello World!";
+	[Property] PlayerController PlayerController { get; set; }
+	[Property] Player Player { get; set; }
+	[Property] Interaction Interaction { get; set; }
+	
+	[Property] public bool ShowHotbar { get; set; } = false;
+	[Property] public bool ShowInventory { get; set; } = false;
+	[Property] public int NumberOfSlots { get; set; } = 5; // Set the default number of slots
+	[Property] public float HealthPercentage { get; set; } = 80; // Example health percentage
+
+	// Calculate the position percentage based on health percentage
+	private float HealthBarPositionPercentage => 100 - HealthPercentage;
+	
+	private TimeSince LastHotbarShowTime = 0;
+	private TimeSince LastInventoryShowTime = 0;
+	/// <summary>
+	/// the hash determines if the system should be rebuilt. If it changes, it will be rebuilt
+	/// </summary>
+	protected override int BuildHash() => System.HashCode.Combine( Time.Now );
+}

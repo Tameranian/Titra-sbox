@@ -1,0 +1,13 @@
+@using Sandbox;
+@inherits PanelComponent
+
+@if (InSequence)
+{
+	<root>
+		<div class="Main">
+			<div style="opacity: @Opacity">
+				<img src="@CurrentEntry.TexturePath" style="transform: scale(@Scale);">
+			</div>
+		</div>
+	</root>
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>package.workbot.simplesplashscreens</name>
+    </assembly>
+    <members>
+        <member name="T:SimpleSplashScreen">
+            <summary>
+            This component allows you to add unity style splash screens to your game
+            </summary>
+        </member>
+    </members>
+</doc>
